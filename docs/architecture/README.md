@@ -4,10 +4,13 @@
 
 1. [Architecture Principles](01-Architecture-Principles.md)
 2. [Architecture Decisions](02-Architecture-Decisions.md)
+3. [Architecture Overview and Diagrams](03-Architecture-Overview-and-Diagrams.md)
 
 ## Role of these documents
 
 The architecture principles are mandatory design constraints for all SDK packs and application architectures. The architecture decision register records the accepted, deferred, rejected, and superseded choices that define the current platform baseline.
+
+The architecture overview translates those principles and decisions into logical, runtime, data, security, and deployment views. Its diagrams describe ownership and interaction boundaries; an SDK box does not automatically imply a separately deployed microservice.
 
 Every SDK implementation pack shall reference these documents and must not introduce contradictory assumptions without a new architecture decision record.
 
@@ -27,6 +30,20 @@ Every SDK implementation pack shall reference these documents and must not intro
 - versioned APIs, events, policies, prompts, and AI resources;
 - executable Claude Code prompts in each implementation pack;
 - final integrated architecture delivered in Markdown and HTML.
+
+## Diagram coverage
+
+The architecture overview includes:
+
+- enterprise platform context;
+- logical layer model and dependency rules;
+- SDK capability map;
+- knowledge ingestion and indexing sequence;
+- grounded AI request sequence;
+- initial runtime and deployment topology;
+- data ownership and consistency model;
+- security control flow;
+- observability, resilience, evolution, and Claude implementation guidance.
 
 ## Change process
 
