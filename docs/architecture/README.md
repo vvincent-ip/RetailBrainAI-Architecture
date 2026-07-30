@@ -6,6 +6,7 @@
 2. [Architecture Decisions](02-Architecture-Decisions.md)
 3. [Architecture Overview and Diagrams](03-Architecture-Overview-and-Diagrams.md)
 4. [Agentic AI and Forecasting Architecture](04-Agentic-AI-and-Forecasting-Architecture.md)
+5. [Final Production Architecture and Business Capabilities](05-Final-Production-Architecture-and-Business-Capabilities.md)
 
 ## Role of these documents
 
@@ -14,6 +15,8 @@ The architecture principles are mandatory design constraints for all SDK packs a
 The architecture overview translates those principles and decisions into logical, runtime, data, security, and deployment views. Its diagrams describe ownership and interaction boundaries; an SDK box does not automatically imply a separately deployed microservice.
 
 The agentic AI and forecasting architecture defines the supervisor and specialist agent portfolio, agent execution controls, tool and memory boundaries, forecasting lifecycle, forecast products, forecast-to-decision loop, human approvals, and closed-loop evaluation.
+
+The final production architecture consolidates the approved platform architecture, all 32 SDK capabilities, application scenarios, functional coverage, data and integration design, security, deployment, operational quality gates, and customer-place acceptance criteria into one implementation reference.
 
 Every SDK implementation pack shall reference these documents and must not introduce contradictory assumptions without a new architecture decision record.
 
@@ -34,15 +37,16 @@ Every SDK implementation pack shall reference these documents and must not intro
 - deterministic controls around probabilistic AI;
 - versioned APIs, events, policies, prompts, agents, tools, forecasts, and AI resources;
 - executable Claude Code prompts in each implementation pack;
+- customer-deployable production quality rather than MVP or POC quality;
 - final integrated architecture delivered in Markdown and HTML.
 
-## Diagram coverage
+## Diagram and functional coverage
 
 The architecture documents include:
 
 - enterprise platform context;
 - logical layer model and dependency rules;
-- SDK capability map;
+- SDK capability map and ownership;
 - knowledge ingestion and indexing sequence;
 - grounded AI request sequence;
 - governed supervisor and specialist agent architecture;
@@ -50,10 +54,13 @@ The architecture documents include:
 - forecast pipeline and forecast-product architecture;
 - forecast-to-decision and realized-outcome feedback loop;
 - memory, tools, risk controls, and human-in-the-loop boundaries;
+- data ownership, consistency and integration models;
+- security and AI-specific control flows;
 - initial runtime and deployment topology;
-- data ownership and consistency model;
-- security control flow;
-- observability, resilience, evolution, and Claude implementation guidance.
+- Admin Portal, Copilot, Customer Service AI, Inventory Intelligence, Pricing, Promotion, Supply Chain AI and Executive Dashboard scenarios;
+- observability, resilience, upgrade, rollback and customer acceptance requirements;
+- three-person dependency and parallelization guidance;
+- Claude implementation guidance in each SDK pack.
 
 ## Change process
 
